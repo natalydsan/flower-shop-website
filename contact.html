@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> bloom 4 you | contact </title>
+        <link rel="icon" type="image/x-icon" href="photos/favicon.ico">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3661102fc9.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- link to style sheet -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <!-- header section -->
+        <header>
+            <!-- toggle button for mobile nav -->
+            <input type="checkbox" name="mobile" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+            <!-- logo -->
+            <a href="index.html" class="logo">bloom <span>4</span> you</a>
+            <!-- primary nav -->
+            <nav class="sitenavigation">
+                <ul>
+                    <li><a href="index.html"> Home</a></li> 
+                    <li><a href="about.html">About</a></li>   
+                    <li><a href="shop.html">Shop</a></li> 
+                    <li><a href="delivery.html">Delivery</a></li>  
+                    <li><a href="reviews.html">Reviews</a></li>   
+                    <li><a href="contact.html">Contact</a></li> 
+                </ul>  
+            </nav>
+            <!-- icons -->
+            <div class="icon">
+                <a href="" class="fas fa-shopping-cart"></a>
+                <a href="" class="fas fa-user"></a>
+            </div>
+        </header>
+        <!-- contact page -->
+        <h1 class="heading"><span>Contact</span> Us</h1>
+        <div class="contactbody">
+            <div class="contact">
+                <div class="row1">
+                    <h2>Contact Info</h2>
+                    <h3><i class="fa fa-phone" aria-hidden="true"></i> Phone</h3>
+                    <p>(402) 555-9736</p>
+                    <h3><i class="fa fa-envelope" aria-hidden="true"></i> Email</h3>
+                    <p>info@bloom4you.com</p>
+                    <h3><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h3>
+                    <p>548 N. 58th St. Omaha, NE 68132</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com/umassboston/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/UMassBoston" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/umassboston/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.yelp.com/" target="_blank"><i class="fa fa-yelp"></i></a></li>
+                    </ul>
+                </div>
+                <div class="row2">
+                    <form action="#"> <!--need to add doc-->
+                        <label for="name">First and Last Name</label>
+                        <input type="text" id="name" placeholder="Your Name..." class="box">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Email..." class="box">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Phone Number..." pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="box">
+                        <!-- <label for="number">Phone Number</label>
+                        <input type="number" placeholder="Phone Number..." class="box"> -->
+                        <label for="subject"> Subject</label>
+                        <textarea name="message" id="subject" class="box" placeholder="Write a Message..." cols="30" rows="10"></textarea>
+                        <input type="submit" value="Send Message" class="btn">
+                    </form>
+                </div>
+                <div class="row3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2999.012469352869!2d-96.00577202521113!3d41.26506440357578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87938deaece0cfc9%3A0x7e832a66976e488!2s548%20N%2058th%20St%2C%20Omaha%2C%20NE%2068132!5e0!3m2!1sen!2sus!4v1714090047720!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ section -->
+        <div class="faqcon">
+            <h1 class="heading"><span>Frequently</span> Asked Questions</h1>
+            <div class="faq">
+                <button class="accordion">
+                    Do you offer international shipping?
+                   <i class="fa-solid fa-chevron-down"></i> 
+                </button>
+                <div class="pannel">
+                    <p>At the moment, we only offer shipping within the United States. We hope to expand our shipping options in the future.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">
+                    How do I care for my flowers?
+                   <i class="fa-solid fa-chevron-down"></i> 
+                </button>
+                <div class="pannel">
+                    <p>Proper care instructions vary depending on the type of flowers you've purchased. However, some general tips include keeping them in clean water, trimming the stems at an angle, and placing them away from direct sunlight and drafts.</p>
+            </div>
+            <div class="faq">
+                <button class="accordion">
+                    Do you offer wedding or event floral services?
+                   <i class="fa-solid fa-chevron-down"></i> 
+                </button>
+                <div class="pannel">
+                    <p>Yes, we specialize in wedding and event floral arrangements. Whether you're planning a wedding, corporate event, or special celebration, our experienced florists can create stunning floral designs to complement your occasion. Contact us to discuss your needs and schedule a consultation.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var pannels = document.querySelectorAll('.pannel');
+                pannels.forEach(function(panel) {
+                    panel.style.display = 'none';
+                });
+            });
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length ; i++) {
+                acc[i].addEventListener("click", function(){
+                    this.classList.toggle("active");
+                    this.parentElement.classList.toggle("active");
+
+                    var pannel = this.nextElementSibling;
+
+                    if(pannel.style.display === "block" || pannel.style.display === "") {
+                        pannel.style.display = "none";
+                    }
+                    else {
+                        pannel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+        <footer> 
+            <p>548 N. 58th St. &#8226; Omaha, NE 68132 &#8226; (402) 555-9736</p>
+        </footer>
+    </body>
+</html>
